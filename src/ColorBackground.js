@@ -3,7 +3,7 @@ import colorNames from 'colornames'
 const ColorBackground = ({colorValue, setColorValue, sethexValue, isDarkText, SetIsDarkText}) => {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
-      <label>Background Color : </label>
+      <label>Background Color : {colorValue} </label>
       <input
         autoFocus
         type="text"
@@ -14,11 +14,6 @@ const ColorBackground = ({colorValue, setColorValue, sethexValue, isDarkText, Se
           setColorValue(e.target.value)
           sethexValue(colorNames(e.target.value))
         }} />
-      <button
-        type="button"
-        onClick={() => SetIsDarkText(!isDarkText)} >
-        색 전환
-      </button>
     </form>
   )
 }
